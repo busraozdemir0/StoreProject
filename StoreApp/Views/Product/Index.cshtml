@@ -1,22 +1,12 @@
-@model List<StoreApp.Models.Product>
+@model List<Product>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    @foreach(StoreApp.Models.Product prd in Model)
-    {
-        <div>
-            <h3>@prd.ProductName</h3>
-            <p>@prd.Price</p>
-            <p>
-                <a href="/Product/Get/@prd.ProductId">Get Detils</a>
-            </p>
-        </div>
-    }
-</body>
-</html>
+ @section Footer{  @*sadece Product/Index sayfasında görünmesini istediğimiz alanı Rendersection yazarak belirtiyoruz *@
+    <div>
+        Only fro Index footer
+    </div>
+}
+
+@foreach (Product prd in Model)
+{
+    <partial name="_ProductCard" model="@prd"/>
+}

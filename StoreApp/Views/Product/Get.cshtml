@@ -1,5 +1,10 @@
-@model StoreApp.Models.Product
+@model Product
 
 <h3>@Model.ProductName</h3>
-<p>@Model.Price</p>
+<p>@Model.Price.ToString("C")</p>
 <a href="/Product/Index">Go To Products</a>
+
+@section Header{
+    <div>Header for only Get</div>
+    
+}
