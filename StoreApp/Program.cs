@@ -11,6 +11,7 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 
 var app = builder.Build();
 
+app.UseStaticFiles();   // Static dosyalara ulaşabilmek için
 app.UseHttpsRedirection();
 app.UseRouting();
 
