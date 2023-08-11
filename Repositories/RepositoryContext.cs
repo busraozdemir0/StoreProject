@@ -6,6 +6,7 @@ namespace Repositories
     public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options) // base'si DbContext'dir.
         {
 
@@ -22,7 +23,19 @@ namespace Repositories
                 new Product() { ProductId = 5, ProductName = "Deck", Price = 1_500 }
             );
             // dotnet ef migrations add ProductSeedData => yukarıdaki kayıtları eklemek için
-        }   // dotnet ef database update => değişikliklerin veritabanına yansıması için
+            // dotnet ef database update => değişikliklerin veritabanına yansıması için
+
+            modelBuilder.Entity<Category>()
+            .HasData(
+                new Category(){CategoryId=1, CategoryName="Book"},
+                new Category(){CategoryId=2, CategoryName="Electronic"}
+            );
+       
+       
+       
+       
+        }   
+
 
     }
 }

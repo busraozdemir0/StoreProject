@@ -13,6 +13,7 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 
 builder.Services.AddScoped<IRepositoryManager,RepositoryManager>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository,CategoryRepository>(); // ilgili ifadenin tanımlanmasını gerçekleştirdik
 
 
 var app = builder.Build();

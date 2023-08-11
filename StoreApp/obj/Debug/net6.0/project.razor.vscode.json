@@ -18408,6 +18408,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.3"
