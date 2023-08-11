@@ -1174,11 +1174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Store\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "D:\\Store\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "d:\\Store\\Repositories\\Repositories.csproj",
+      "projectPath": "D:\\Store\\Repositories\\Repositories.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "d:\\Store\\Repositories\\obj\\",
+      "outputPath": "D:\\Store\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1195,8 +1195,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\Store\\Entities\\Entities.csproj": {
-              "projectPath": "d:\\Store\\Entities\\Entities.csproj"
+            "D:\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Store\\Entities\\Entities.csproj"
             }
           }
         }
