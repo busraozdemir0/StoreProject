@@ -1,12 +1,13 @@
 @model List<Product>
 
- @section Footer{  @*sadece Product/Index sayfasında görünmesini istediğimiz alanı Rendersection yazarak belirtiyoruz *@
-    <div>
-        Only fro Index footer
-    </div>
-}
-
-@foreach (Product prd in Model)
-{
-    <partial name="_ProductCard" model="@prd"/>
-}
+@* @section Footer{ sadece Product/Index sayfasında görünmesini istediğimiz alanı Rendersection yazarak belirtiyoruz
+<div>
+Only fro Index footer
+</div>
+} *@
+<div class="row my-3">
+    @foreach (Product prd in Model)
+    {
+        <partial name="_ProductCard" model="@prd" />
+    }
+</div>
