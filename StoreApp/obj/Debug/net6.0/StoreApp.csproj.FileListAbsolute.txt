@@ -55,3 +55,7 @@ D:\Store\StoreApp\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\Store\StoreApp\obj\Debug\net6.0\StoreApp.csproj.CopyComplete
 D:\Store\StoreApp\bin\Debug\net6.0\StoreApp.staticwebassets.runtime.json
 D:\Store\StoreApp\bin\Debug\net6.0\libman.json
+D:\Store\StoreApp\bin\Debug\net6.0\Entities.dll
+D:\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
+D:\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
+D:\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb
