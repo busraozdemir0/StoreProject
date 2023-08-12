@@ -32,5 +32,10 @@ namespace Repositories
                 ? _context.Set<T>().Where(expression).SingleOrDefault()  // işlem true ise
                 :_context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();  // işlem false ise
         }
+
+        public void Remove(T entity)
+        {
+           _context.Set<T>().Remove(entity);
+        }
     }
 }
