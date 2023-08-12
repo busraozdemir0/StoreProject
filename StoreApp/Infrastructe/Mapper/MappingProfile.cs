@@ -9,6 +9,7 @@ namespace StoreApp.Infrastructe.Mapper
         public MappingProfile()
         {
             CreateMap<ProductDtoForInsertion, Product>(); //Mapleme işlemi otomatik olarak gerçekleşerek dto, Product nesnesine dönüştürülecek
+            CreateMap<ProductDtoForUpdate, Product>().ReverseMap(); 
         }
     }
 }

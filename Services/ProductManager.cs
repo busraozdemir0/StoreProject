@@ -49,11 +49,22 @@ namespace Services
             return product;
         }
 
-        public void UpdateOneProduct(Product product)
+        public ProductDtoForUpdate GetOneProductForUpdate(int id, bool trackChanges)
         {
-            var entity = _manager.Product.GetOneProduct(product.ProductId, true);
-            entity.ProductName = product.ProductName;
-            entity.Price = product.Price;
+            var product=GetOneProduct(id, trackChanges);
+            var productDto=_mapper.Map<ProductDtoForUpdate>(product);
+            return productDto;
+        }
+
+        public void UpdateOneProduct(ProductDtoForUpdate productDto)
+        {
+            //var entity = _manager.Product.GetOneProduct(productDto.ProductId, true);
+            // entity.ProductName = productDto.ProductName;
+            // entity.Price = productDto.Price;
+            // entity.CategoryId=productDto.CategoryId;
+            
+            var entity=_mapper.Map<Product>(productDto);
+            _manager.Product.UpdateOneProduct(entity);
             _manager.Save();
         }
     }
