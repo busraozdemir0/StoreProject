@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Store\\Services\\Services.csproj": {}
+    "d:\\Store\\Services\\Services.csproj": {}
   },
   "projects": {
     "D:\\Store\\Entities\\Entities.csproj": {
@@ -128,14 +128,14 @@
         }
       }
     },
-    "D:\\Store\\Services\\Services.csproj": {
+    "d:\\Store\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Store\\Services\\Services.csproj",
+        "projectUniqueName": "d:\\Store\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\Store\\Services\\Services.csproj",
+        "projectPath": "d:\\Store\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Store\\Services\\obj\\",
+        "outputPath": "d:\\Store\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
