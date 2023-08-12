@@ -9,6 +9,7 @@ namespace Repositories
         {
         }
 
+        public void CreateProduct(Product product)=>Create(product);
         public IQueryable<Product> GetAllProducts(bool trackChanges)=>FindAll(trackChanges); // base üzerindeki FindAll'u kullanabiliriz
 
         // ? veritabanında null değer de olabileceği anlamına geliyor.

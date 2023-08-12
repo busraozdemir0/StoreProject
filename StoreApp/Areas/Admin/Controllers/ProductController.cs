@@ -1,12 +1,39 @@
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductController:Controller
+    public class ProductController : Controller
     {
-         public IActionResult Index()
+        private readonly IServiceManager _manager;
+
+        public ProductController(IServiceManager manager)
         {
+            _manager = manager;
+        }
+
+        public IActionResult Index()
+        {
+            var model = _manager.ProductService.GetAllProducts(false);
+            return View(model);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] // Formun doğrulanması için
+        public IActionResult Create([FromForm] Product product) // ürün bilgisi formdan gelecek
+        {
+            if (ModelState.IsValid)
+            {
+                _manager.ProductService.CreateProduct(product);
+                return RedirectToAction("Index");
+            }
             return View();
         }
     }
