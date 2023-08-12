@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\Store\\Repositories\\Repositories.csproj": {
+    "d:\\Store\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Store\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "d:\\Store\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\Store\\Repositories\\Repositories.csproj",
+        "projectPath": "d:\\Store\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Store\\Repositories\\obj\\",
+        "outputPath": "d:\\Store\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,8 +155,8 @@
               "D:\\Store\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\Store\\Entities\\Entities.csproj"
               },
-              "D:\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\Store\\Repositories\\Repositories.csproj"
+              "d:\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "d:\\Store\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -170,6 +170,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -217,8 +223,8 @@
               "D:\\Store\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\Store\\Entities\\Entities.csproj"
               },
-              "D:\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\Store\\Repositories\\Repositories.csproj"
+              "d:\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "d:\\Store\\Repositories\\Repositories.csproj"
               },
               "d:\\Store\\Services\\Services.csproj": {
                 "projectPath": "d:\\Store\\Services\\Services.csproj"

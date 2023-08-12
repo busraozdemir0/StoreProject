@@ -21,6 +21,8 @@ builder.Services.AddScoped<IServiceManager,ServiceManager>();
 builder.Services.AddScoped<IProductService,ProductManager>(); 
 builder.Services.AddScoped<ICategoryService,CategoryManager>(); 
 
+builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlarını otomatik olarak nesnelere dönüştüren servis kaydı
+
 
 var app = builder.Build();
 
