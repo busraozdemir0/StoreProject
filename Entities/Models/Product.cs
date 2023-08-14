@@ -8,6 +8,8 @@ public class Product
     public String? ProductName { get; set; } = String.Empty;
      [Required(ErrorMessage ="Price is required")]
     public decimal Price { get; set; }
+    public String? Summary{get;set;}=String.Empty;
+    public String? ImageUrl{get;set;}
     public int? CategoryId { get; set; } // zorunlu olmasın null değer de içerebilsin diye ? koyduk
     public Category? Category { get; set; } // Navigation prop
 }

@@ -1,5 +1,18 @@
 @model Product
 
+<div class=row>
+    <div class=col-md-12>
+        <div class=text-center>
+            <h6 class=display-6>
+                @Model.ProductName
+            </h6>
+
+            <img class="img-fluid shadow rounded-3 my-3" src=@Model?.ImageUrl alt="@Model.ProductName" />
+            <p class="lead text-center">@Model.Price.ToString("c")</p>
+        </div>
+    </div>
+</div>
+
 <h3>@Model.ProductName</h3>
 <p>@Model.Price.ToString("C")</p>
 <div class="btn-group">
