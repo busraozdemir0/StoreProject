@@ -13,16 +13,23 @@
     </div>
 </div>
 
-<h3>@Model.ProductName</h3>
-<p>@Model.Price.ToString("C")</p>
-<div class="btn-group">
-    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
-        <i class="fa-solid fa-house"></i> Home</a>
-    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
-        <i class="fa-solid fa-list"></i> Product</a>
+<div class="text-center">
+    <div class="btn-group">
+        <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">
+            <i class="fa-solid fa-house"></i> Home</a>
+            <form id="@Model.ProductId" asp-page="/cart" method="post" >
+                <input type="hidden" asp-for="ProductId"/>
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <button type="submit" class="btn btn-outline-primary" >
+                    <i class="fa fa-cart-plus"></i>
+                </button>
+            </form>
+        <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+            <i class="fa-solid fa-list"></i> Product</a>
+    </div>
 </div>
 
 @section Header{
     <div>Header for only Get</div>
-    
+
 }
