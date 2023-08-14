@@ -28,10 +28,12 @@ builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 builder.Services.AddScoped<IRepositoryManager,RepositoryManager>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>(); // ilgili ifadenin tanımlanmasını gerçekleştirdik
+builder.Services.AddScoped<IOrderRepository,OrderRepository>(); 
 
 builder.Services.AddScoped<IServiceManager,ServiceManager>(); 
 builder.Services.AddScoped<IProductService,ProductManager>(); 
 builder.Services.AddScoped<ICategoryService,CategoryManager>(); 
+builder.Services.AddScoped<IOrderService,OrderManager>(); 
 
 builder.Services.AddScoped<Cart>(c=>SessionCart.GetCart(c)); // Bu servis kaydı ile her kullanıcı ayrı bir cart nesnesi kullanacak
 

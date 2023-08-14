@@ -5,5 +5,6 @@ namespace Services.Contracts
         //Servisleri yönettiğimiz yer
         IProductService ProductService{ get; }
         ICategoryService CategoryService{ get; }
+        IOrderService OrderService{ get; }
     }
 }
