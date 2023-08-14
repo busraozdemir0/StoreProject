@@ -1,3 +1,4 @@
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
@@ -22,6 +23,8 @@ builder.Services.AddScoped<ICategoryRepository,CategoryRepository>(); // ilgili 
 builder.Services.AddScoped<IServiceManager,ServiceManager>(); 
 builder.Services.AddScoped<IProductService,ProductManager>(); 
 builder.Services.AddScoped<ICategoryService,CategoryManager>(); 
+
+builder.Services.AddSingleton<Cart>(); // Bu servis kaydı ile herkes aynı sepeti kullanıyor(ilerde oturum yönetimi ile kişiye özel olacak)
 
 builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlarını otomatik olarak nesnelere dönüştüren servis kaydı
 
