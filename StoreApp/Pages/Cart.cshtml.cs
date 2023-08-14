@@ -2,6 +2,7 @@ using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Services.Contracts;
+using StoreApp.Infrastructe.Extensions;
 
 namespace StoreApp.Pages
 {
@@ -10,16 +11,17 @@ namespace StoreApp.Pages
         private readonly IServiceManager _manager;
         public Cart Cart { get; set; } //IoC
 
-        public CartModel(IServiceManager manager, Cart cart)
+        public CartModel(IServiceManager manager,Cart cartService)
         {
             _manager = manager;
-            Cart = cart;
+            Cart=cartService;
         }
 
         public string ReturnUrl { get; set; }
         public void OnGet (string returnUrl) // Sepete giderken hangi sayfadan geldiyse o sayfanın url'ini tutacağız. Sepetten geri çıktığında tekrar o sayfaya döndürebilmek için
         {
             ReturnUrl = returnUrl ?? "/"; // referans almadıysa / kullanarak kök dizine gidecek
+            //Cart=HttpContext.Session.GetJson<Cart>("cart") ?? new Cart(); // cart nesnesi session'da varsa olanı alacak yoksa yeni bir kart nesnesi üretecek
         }
 
         public IActionResult OnPost(int productId, string returnUrl) // Sepete ürün ekleme işlemi
