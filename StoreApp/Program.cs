@@ -7,6 +7,8 @@ using Services.Contracts;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); // Controller ve View'ların birlikte kullanılacağını ifade ettik
+builder.Services.AddRazorPages(); // RazorPage sayfaları controller olmadan da sayfaları yapmamıza yardımcı olur
+
 builder.Services.AddDbContext<RepositoryContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"),
@@ -40,6 +42,8 @@ app.UseEndpoints(endpoints=> {
         name:"default",
         pattern:"{controller=Home}/{action=Index}/{id?}"
     );
+
+    endpoints.MapRazorPages();
 });
    
 
