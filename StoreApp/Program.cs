@@ -15,6 +15,9 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"),
     b=>b.MigrationsAssembly("StoreApp")); //Migrations ifadeleri StoreApp klasörü içerisinde oluşacak
 });
+// Oturum yönetimi için iki tane servis
+builder.Services.AddDistributedMemoryCache(); // sunucu tarafındaki bilgileri tutar
+builder.Services.AddSession();
 
 builder.Services.AddScoped<IRepositoryManager,RepositoryManager>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
@@ -32,6 +35,8 @@ builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlar
 var app = builder.Build();
 
 app.UseStaticFiles();   // Static dosyalara ulaşabilmek için
+app.UseSession();  // Oturumları kullanabilmek için
+
 app.UseHttpsRedirection();
 app.UseRouting();
 
