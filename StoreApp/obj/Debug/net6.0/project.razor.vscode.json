@@ -18909,6 +18909,25 @@
         }
       },
       {
+        "HashCode": -632839300,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__CartSummaryViewComponentTagHelper",
+        "AssemblyName": "StoreApp",
+        "DisplayName": "CartSummaryViewComponentTagHelper",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:cart-summary",
+            "CaseSensitive": false
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "__Generated__CartSummaryViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "CartSummary",
+          "Runtime.Name": "ITagHelper"
+        }
+      },
+      {
         "HashCode": 1476917222,
         "Kind": "Components.Bind",
         "Name": "Bind",
