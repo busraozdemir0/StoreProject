@@ -17,7 +17,12 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 });
 // Oturum yönetimi için iki tane servis
 builder.Services.AddDistributedMemoryCache(); // sunucu tarafındaki bilgileri tutar
-builder.Services.AddSession();
+builder.Services.AddSession(options=>
+{
+    options.Cookie.Name="StoreApp.Session";
+    options.IdleTimeout=TimeSpan.FromMinutes(180); // 180 dk sonra oturumdan düşecek
+});
+builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
 builder.Services.AddScoped<IRepositoryManager,RepositoryManager>();
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
