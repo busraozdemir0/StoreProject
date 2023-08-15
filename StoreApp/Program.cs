@@ -40,6 +40,7 @@ app.UseEndpoints(endpoints=> {
 
     endpoints.MapRazorPages();
 });
-   
 
+app.ConfigureAndCheckMigration(); // metot sayesinde migration'u update etmemize gerek kalmayacak çünkü bu metot otomatik migrate işlemini yapacak
+   
 app.Run();
