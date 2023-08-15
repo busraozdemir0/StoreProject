@@ -19,5 +19,16 @@ namespace StoreApp.Infrastructe.Extensions
             }
 
         }
+
+        // Localization
+        public static void ConfigureLocalization(this WebApplication app)
+        {
+            app.UseRequestLocalization(options=>
+            {
+                options.AddSupportedCultures("tr-TR") // para sembolünün dolar değil tl olarak gelmesi için
+                    .AddSupportedUICultures("tr-TR")
+                    .SetDefaultCulture("TR-tr");
+            });
+        }
     }
 }

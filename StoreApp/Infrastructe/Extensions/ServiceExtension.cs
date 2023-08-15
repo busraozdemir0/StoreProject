@@ -54,5 +54,14 @@ namespace StoreApp.Infrastructe.Extensions
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IOrderService, OrderManager>();
         }
+
+        // url yönlendirmesinde ilgili yazılar veya yönlendirmeler küçük harf olması için (../product/get/2 gibi)
+        public static void ConfigureRouting(this IServiceCollection services)
+        {
+            services.AddRouting(options => {
+                options.LowercaseUrls = true;
+                options.AppendTrailingSlash = false; // en sona bir slash(/) eklenmemesi için
+            });
+        }
     }
 }

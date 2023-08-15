@@ -1330,11 +1330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Store\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\Store\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "d:\\Store\\Services\\Services.csproj",
+      "projectPath": "D:\\Store\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "d:\\Store\\Services\\obj\\",
+      "outputPath": "D:\\Store\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

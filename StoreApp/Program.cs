@@ -15,6 +15,8 @@ builder.Services.ConfigureRepositoryRegistration();
 
 builder.Services.ConfigureServiceRegistration();
 
+builder.Services.ConfigureRouting(); // url yönlendirmesinde ilgili yazılar veya yönlendirmeler küçük harf olması için(../product/get/2 gibi)
+
 
 builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlarını otomatik olarak nesnelere dönüştüren servis kaydı
 
@@ -26,6 +28,8 @@ app.UseSession();  // Oturumları kullanabilmek için
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.ConfigureLocalization(); // Localization metodu
 
 app.UseEndpoints(endpoints=> {
     endpoints.MapAreaControllerRoute(   //Area için endpoint tanımı yaptık
