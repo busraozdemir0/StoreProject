@@ -1,5 +1,6 @@
 using Entities.Models;
 using Entities.Dtos;
+using Entities.RequestParameters;
 
 namespace Services.Contracts
 {
@@ -7,6 +8,7 @@ namespace Services.Contracts
     {
         IEnumerable<Product> GetAllProducts(bool trackChanges);
         IEnumerable<Product> GetShowcaseProducts(bool trackChanges);
+        IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters p);
         Product? GetOneProduct(int id, bool trackChanges);
         void CreateProduct(ProductDtoForInsertion productDto);
         void UpdateOneProduct(ProductDtoForUpdate productDto);

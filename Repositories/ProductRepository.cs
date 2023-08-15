@@ -1,9 +1,12 @@
 using Entities.Models;
+using Entities.RequestParameters;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
+using Repositories.Extensions;
 
 namespace Repositories
 {
-    public class ProductRepository : RepositoryBase<Product>, IProductRepository
+    public sealed class ProductRepository : RepositoryBase<Product>, IProductRepository  // sealed => ProductRepository classının başka herhangi bir class tarafından kalıtım alınamayacağı anlamına gelir
     {
         public ProductRepository(RepositoryContext context) : base(context) // Veritabanına erişim için base contexti gönderdik
         {
@@ -14,6 +17,13 @@ namespace Repositories
         public void DeleteOneProduct(Product product)=>Remove(product);
 
         public IQueryable<Product> GetAllProducts(bool trackChanges)=>FindAll(trackChanges); // base üzerindeki FindAll'u kullanabiliriz
+
+        public IQueryable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return _context
+                .Products
+                .FilteredByCategoryId(p.CategoryId);
+        }
 
         // ? veritabanında null değer de olabileceği anlamına geliyor.
         public Product? GetOneProduct(int id, bool trackChanges) // bool trackChanges => ifadesi değişiklikleri izlemek için yazılmaktadır.
