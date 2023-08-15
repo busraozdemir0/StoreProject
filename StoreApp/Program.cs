@@ -1,41 +1,20 @@
-using Entities.Models;
-using Microsoft.EntityFrameworkCore;
-using Repositories;
-using Repositories.Contracts;
-using Services;
-using Services.Contracts;
-using StoreApp.Models;
+using StoreApp.Infrastructe.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); // Controller ve View'ların birlikte kullanılacağını ifade ettik
+
 builder.Services.AddRazorPages(); // RazorPage sayfaları controller olmadan da sayfaları yapmamıza yardımcı olur
 
-builder.Services.AddDbContext<RepositoryContext>(options =>
-{
-    options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"),
-    b=>b.MigrationsAssembly("StoreApp")); //Migrations ifadeleri StoreApp klasörü içerisinde oluşacak
-});
-// Oturum yönetimi için iki tane servis
-builder.Services.AddDistributedMemoryCache(); // sunucu tarafındaki bilgileri tutar
-builder.Services.AddSession(options=>
-{
-    options.Cookie.Name="StoreApp.Session";
-    options.IdleTimeout=TimeSpan.FromMinutes(180); // 180 dk sonra oturumdan düşecek
-});
-builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
+builder.Services.ConfigureDbContext(builder.Configuration);
 
-builder.Services.AddScoped<IRepositoryManager,RepositoryManager>();
-builder.Services.AddScoped<IProductRepository,ProductRepository>();
-builder.Services.AddScoped<ICategoryRepository,CategoryRepository>(); // ilgili ifadenin tanımlanmasını gerçekleştirdik
-builder.Services.AddScoped<IOrderRepository,OrderRepository>(); 
+builder.Services.ConfigureSession(); //Session yönetimini configüre haline getirerek metot yaptık. Burda da metodu çağırıyoruz.
 
-builder.Services.AddScoped<IServiceManager,ServiceManager>(); 
-builder.Services.AddScoped<IProductService,ProductManager>(); 
-builder.Services.AddScoped<ICategoryService,CategoryManager>(); 
-builder.Services.AddScoped<IOrderService,OrderManager>(); 
+builder.Services.ConfigureRepositoryRegistration();
 
-builder.Services.AddScoped<Cart>(c=>SessionCart.GetCart(c)); // Bu servis kaydı ile her kullanıcı ayrı bir cart nesnesi kullanacak
+builder.Services.ConfigureServiceRegistration();
+
 
 builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlarını otomatik olarak nesnelere dönüştüren servis kaydı
 
