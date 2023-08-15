@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Store/StoreApp/Pages/Complete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Store/StoreApp/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Store/StoreApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Store/StoreApp/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Store/StoreApp/Views/Product/Get.cshtml]
