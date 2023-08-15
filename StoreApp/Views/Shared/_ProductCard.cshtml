@@ -2,23 +2,30 @@
 
 <div class="col-sm-12 col-md-4 my-3 ">
     <div class="card" style="width: 18rem;">
+        <div class="card-header text-center">
+            @Model.ProductName
+        </div>
         <img style="height:250px;" class="card-img-top" src="@Model?.ImageUrl" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">@Model.ProductName</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+            <div class="card-text">
+                <div class="text-danger text-center lead p-2 rounded-2">
+                    @Model?.Price.ToString("c2")
+                </div>
+            </div>
+            <p class="card-text">@Model?.Summary</p>
+            <div class="d-flex justify-content-center">
              <div class="btn btn-group"> @* btn group ile iki butonun yan yana gelmesini sağladık *@
-                <a asp-action="Get" asp-route-id=@Model.ProductId class="btn btn-primary">
+                <a asp-controller="Product" asp-action="Get" asp-route-id=@Model.ProductId class="btn btn-outline-secondary rounded-2">
                     <i class="fa-solid fa-arrow-right"></i>
-                    Details
                 </a>
                 <form id="@Model.ProductId" asp-page="/Cart" method="post">
                     <input type="hidden" asp-for="ProductId"/>
                     <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-                    <button type="submit" class="btn btn-outline-primary">
+                    <button type="submit" class="btn btn-outline-secondary mx-1">
                         <i class="fa fa-cart-plus"></i>
                     </button>
                 </form>
+            </div>
             </div>
         </div>
     </div>

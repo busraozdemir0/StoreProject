@@ -1,0 +1,12 @@
+@model IEnumerable<Product>
+
+<div class="display-6 text-center my-3">
+    <h6 class="display-6">Popular Products</h6> <!-- Showcase true olan ürünler ana sayfada listelenecek -->
+</div>
+
+<div class="row">
+    @foreach(var prd in Model)
+    {
+        <partial name="_ProductCard" model="prd" />
+    }
+</div>
