@@ -23,7 +23,8 @@ namespace Repositories
             return _context
                 .Products
                 .FilteredByCategoryId(p.CategoryId)
-                .FilteredBySearchTerm(p.SearchTerm);
+                .FilteredBySearchTerm(p.SearchTerm)
+                .FilteredByPrice(p.MinPrice,p.MaxPrice,p.IsValidPrice);
         }
 
         // ? veritabanında null değer de olabileceği anlamına geliyor.
