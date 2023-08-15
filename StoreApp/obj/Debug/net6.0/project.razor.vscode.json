@@ -18947,6 +18947,25 @@
         }
       },
       {
+        "HashCode": -327651133,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__ProductFilterMenuViewComponentTagHelper",
+        "AssemblyName": "StoreApp",
+        "DisplayName": "ProductFilterMenuViewComponentTagHelper",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:product-filter-menu",
+            "CaseSensitive": false
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "__Generated__ProductFilterMenuViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "ProductFilterMenu",
+          "Runtime.Name": "ITagHelper"
+        }
+      },
+      {
         "HashCode": 1877952204,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -23904,6 +23923,11 @@
     {
       "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\_ProductCard.cshtml",
       "TargetPath": "Views\\Shared\\_ProductCard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\Components\\ProductFilterMenu\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\ProductFilterMenu\\Default.cshtml",
       "FileKind": "mvc"
     }
   ]
