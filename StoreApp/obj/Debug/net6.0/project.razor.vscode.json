@@ -24082,6 +24082,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\_ProductCard.cshtml",
       "TargetPath": "Views\\Shared\\_ProductCard.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
