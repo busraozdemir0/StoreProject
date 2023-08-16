@@ -1,12 +1,14 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Repositories;
 using Repositories.Contracts;
 using Services;
 using Services.Contracts;
 using StoreApp.Models;
 
-namespace StoreApp.Infrastructe.Extensions
+namespace StoreApp.Infrastructure.Extensions
 {
     public static class ServiceExtension
     {
@@ -21,7 +23,22 @@ namespace StoreApp.Infrastructe.Extensions
                     configuration.GetConnectionString("sqlconnection"),
                     b => b.MigrationsAssembly("StoreApp")
                 ); //Migrations ifadeleri StoreApp klasörü içerisinde oluşacak
+                options.EnableSensitiveDataLogging(true);
             });
+        }
+
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.AddIdentity<IdentityUser,IdentityRole>(options=>
+            {
+                options.SignIn.RequireConfirmedAccount=false;
+                options.User.RequireUniqueEmail=true; // aynı emailden bir kere daha girilemesin
+                options.Password.RequireLowercase=false; // şifrede küçük harf zorunluluğu olmasın
+                options.Password.RequireUppercase=false; // şifrede büyük harf zorunluluğu olmasın
+                options.Password.RequireDigit=false; // şifre de rakam zorunluluğu olmasın
+                options.Password.RequiredLength=6;
+            })
+            .AddEntityFrameworkStores<RepositoryContext>();
         }
 
         public static void ConfigureSession(this IServiceCollection services)

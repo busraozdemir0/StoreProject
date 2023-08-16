@@ -1,4 +1,4 @@
-using StoreApp.Infrastructe.Extensions;
+using StoreApp.Infrastructure.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews(); // Controller ve View'ların birlikt
 builder.Services.AddRazorPages(); // RazorPage sayfaları controller olmadan da sayfaları yapmamıza yardımcı olur
 
 builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity(); // identity kütüphanesi için yazdığımız eklenti metodunun servis kaydı
 
 builder.Services.ConfigureSession(); //Session yönetimini configüre haline getirerek metot yaptık. Burda da metodu çağırıyoruz.
 
@@ -46,5 +47,7 @@ app.UseEndpoints(endpoints=> {
 });
 
 app.ConfigureAndCheckMigration(); // metot sayesinde migration'u update etmemize gerek kalmayacak çünkü bu metot otomatik migrate işlemini yapacak
-   
+
+app.ConfigureDefaultAdminUser(); // admin rolünde varsayılan bir kullanıcı oluşturan eklenti metot
+
 app.Run();

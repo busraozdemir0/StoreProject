@@ -1,12 +1,14 @@
 ﻿using System.Reflection;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Repositories.Config;
 using SQLitePCL;
+using Microsoft.AspNetCore.Identity;
 
 namespace Repositories
 {
-    public class RepositoryContext : DbContext
+    public class RepositoryContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
