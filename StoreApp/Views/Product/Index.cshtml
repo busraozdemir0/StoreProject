@@ -1,19 +1,24 @@
-@model IQueryable<Product>
+@model ProductListViewModel
 
 <div class=row>
     <div class=col-md-3>
         @await Component.InvokeAsync("CategoriesMenu")
         @await Component.InvokeAsync("ProductFilterMenu")
-        <div products="">  @* Tag helper yardımıyla son eklenen ürünler geliyor *@
+        <div products="" number="3"> @* Tag helper yardımıyla son eklenen ürünler geliyor *@
 
         </div>
     </div>
     <div class=col-md-9>
         <div class="row my-3">
-            @foreach (Product prd in Model)
+            @foreach (Product prd in Model.Products)
             {
                 <partial name="_ProductCard" model="@prd" />
             }
+        </div>
+        <div>
+            <div page-model="@Model?.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn"
+                page-class-normal="btn-outline-secondary" page-class-selected="btn-primary" class="btn-group">
+            </div>
         </div>
     </div>
 </div>
