@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ngHtl62AZm5EO8URjcsqQes0X1oSP4uLSII/P3B4EJYHsyr2jhCIru13vM/aK9k/wQwmmynF6uxP10Yk2eWtZw==",
+  "dgSpecHash": "KPdRLL0RbWZqPpmudSG4N4bqKRticLDtm2+mSkmBoqSTarRh7qe8ZKRzWFNvH+WFTlSJcPy+KqjtOweivY0fBg==",
   "success": true,
-  "projectFilePath": "d:\\Store\\StoreApp\\StoreApp.csproj",
+  "projectFilePath": "D:\\Store\\StoreApp\\StoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

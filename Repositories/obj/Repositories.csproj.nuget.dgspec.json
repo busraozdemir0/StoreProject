@@ -4,14 +4,14 @@
     "d:\\Store\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "d:\\Store\\Entities\\Entities.csproj": {
+    "D:\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Store\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "d:\\Store\\Entities\\Entities.csproj",
+        "projectPath": "D:\\Store\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "d:\\Store\\Entities\\obj\\",
+        "outputPath": "D:\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Store\\Entities\\Entities.csproj": {
-                "projectPath": "d:\\Store\\Entities\\Entities.csproj"
+              "D:\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Store\\Entities\\Entities.csproj"
               }
             }
           }
