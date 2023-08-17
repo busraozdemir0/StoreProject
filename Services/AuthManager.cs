@@ -43,6 +43,12 @@ namespace Services
             return result;
         }
 
+        public async Task<IdentityResult> DeleteOneUser(string userName)
+        {
+            var user = await GetOneUser(userName); // kullanıcının bize getirilmesini sağladık
+            return await _userManager.DeleteAsync(user); // gelen kullanıcının silinmesi işlemi
+        }
+
         public IEnumerable<IdentityUser> GetAllUsers()
         {
             return _userManager.Users.ToList();
@@ -50,32 +56,27 @@ namespace Services
 
         public async Task<IdentityUser> GetOneUser(string userName)
         {
-            return await _userManager.FindByNameAsync(userName); // userName göre bulma
+            var user = await _userManager.FindByNameAsync(userName); // userName göre bulma
+            if (user is not null) // belirtilen user boş değilse bu user'ı döndür
+                return user;
+            throw new Exception("User could not be found."); // akdi takdirde hata fırlat
         }
 
         public async Task<UserDtoForUpdate> GetOneUserForUpdate(string userName)
         {
-            var user= await GetOneUser(userName);
-            if(user is not null)
-            {
-                var userDto=_mapper.Map<UserDtoForUpdate>(user); // mapleme
-                userDto.Roles=new HashSet<string>(Roles.Select(r=>r.Name).ToList()); // bütün rolleri aldık
-                userDto.UserRoles=new HashSet<string>(await _userManager.GetRolesAsync(user)); // gönderilen kullanıcının rolleri
-                return userDto;
-            }
-            throw new Exception("An error occured.");
+            var user = await GetOneUser(userName);
+            var userDto = _mapper.Map<UserDtoForUpdate>(user); // mapleme
+            userDto.Roles = new HashSet<string>(Roles.Select(r => r.Name).ToList()); // bütün rolleri aldık
+            userDto.UserRoles = new HashSet<string>(await _userManager.GetRolesAsync(user)); // gönderilen kullanıcının rolleri
+            return userDto;
         }
 
         public async Task<IdentityResult> ResetPassword(ResetPasswordDto model)
         {
-            var user= await GetOneUser(model.UserName);
-            if(user is not null)
-            {
-                await _userManager.RemovePasswordAsync(user); // kullanıcının şifresini öncelikle kaldırıyoruz
-                var result= await _userManager.AddPasswordAsync(user,model.Password);
-                return result;
-            }
-            throw new Exception("User could not be found.");
+            var user = await GetOneUser(model.UserName);
+            await _userManager.RemovePasswordAsync(user); // kullanıcının şifresini öncelikle kaldırıyoruz
+            var result = await _userManager.AddPasswordAsync(user, model.Password);
+            return result;
         }
 
         public async Task Update(UserDtoForUpdate userDto)
@@ -83,21 +84,14 @@ namespace Services
             var user = await GetOneUser(userDto.UserName);
             user.PhoneNumber = userDto.PhoneNumber;
             user.Email = userDto.Email;
-
-            if (user is not null) // böyle bir kullanıcı varsa güncelleme işlemine geç
+            var result = await _userManager.UpdateAsync(user);
+            if (userDto.Roles.Count > 0)
             {
-                var result = await _userManager.UpdateAsync(user);
-                if (userDto.Roles.Count > 0)
-                {
-                    var userRoles = await _userManager.GetRolesAsync(user); // kullanıcı hangi rollere aitse o rolleri aldık
-                    var r1 = await _userManager.RemoveFromRolesAsync(user, userRoles); // kullanıcının rollerini bu satır ile kaldırdık(örn. user rolü kaldırıldı)
-                    var r2 = await _userManager.AddToRolesAsync(user, userDto.Roles); // belirtilen kullanıcının rollerini kaldırtıktan sonra yeni rolleri atadık(örn. kaldırılan user rolü yerine hem user hem editör eklendi)
-                } 
-                return;
+                var userRoles = await _userManager.GetRolesAsync(user); // kullanıcı hangi rollere aitse o rolleri aldık
+                var r1 = await _userManager.RemoveFromRolesAsync(user, userRoles); // kullanıcının rollerini bu satır ile kaldırdık(örn. user rolü kaldırıldı)
+                var r2 = await _userManager.AddToRolesAsync(user, userDto.Roles); // belirtilen kullanıcının rollerini kaldırtıktan sonra yeni rolleri atadık(örn. kaldırılan user rolü yerine hem user hem editör eklendi)
             }
-            throw new Exception("System has problem with user update.");
-
-           
+            return;
         }
     }
 }
