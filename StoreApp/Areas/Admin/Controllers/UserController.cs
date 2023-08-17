@@ -54,5 +54,21 @@ namespace StoreApp.Areas.Admin.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> ResetPassword([FromRoute(Name ="id")] string id)
+        {
+            return View(new ResetPasswordDto(){
+                UserName=id
+            });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword([FromForm] ResetPasswordDto model)
+        {
+            var result= await _manager.AuthService.ResetPassword(model);
+            return result.Succeeded ? RedirectToAction("Index") : View();
+
+        }
     }
 }

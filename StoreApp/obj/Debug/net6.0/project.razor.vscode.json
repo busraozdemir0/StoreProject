@@ -24117,6 +24117,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\User\\Update.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\User\\Update.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\User\\ResetPassword.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\User\\ResetPassword.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

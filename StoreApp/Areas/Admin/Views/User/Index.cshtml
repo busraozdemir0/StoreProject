@@ -5,7 +5,7 @@
 </div>
 <div class="d-flex justify-content-end my-3">
     <a class="btn btn-outline-success" asp-action="Create">
-        <i class="fa fa-plus"></i>Add User</a>
+        <i class="fa fa-plus"></i> Add User</a>
 </div>
 <table>
     <thead>
@@ -26,7 +26,7 @@
                 <td>
                     <div class="btn-group">
                         <a class="btn btn-sm btn-warning" asp-action="Update" asp-route-id="@user.UserName">Edit</a>
-                        <a class="btn btn-sm btn-info">Reset Password</a>
+                        <a class="btn btn-sm btn-info" asp-action="resetPassword" asp-route-id="@user.UserName">Reset Password</a>
                         <a class="btn btn-sm btn-danger">Delete</a>
                     </div>
                 </td>
