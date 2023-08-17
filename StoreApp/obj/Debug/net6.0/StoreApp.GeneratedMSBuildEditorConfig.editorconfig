@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StoreApp
 build_property.RootNamespace = StoreApp
-build_property.ProjectDir = d:\Store\StoreApp\
+build_property.ProjectDir = D:\Store\StoreApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\Store\StoreApp
+build_property.MSBuildProjectDirectory = D:\Store\StoreApp
 build_property._RazorSourceGeneratorDebug = 
 
 [D:/Store/StoreApp/Areas/Admin/Views/Category/Index.cshtml]
@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Store/StoreApp/Areas/Admin/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Store/StoreApp/Areas/Admin/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Store/StoreApp/Areas/Admin/Views/User/Index.cshtml]

@@ -1,6 +1,7 @@
 using AutoMapper;
 using Entities.Dtos;
 using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace StoreApp.Infrastructure.Mapper
 {
@@ -10,6 +11,7 @@ namespace StoreApp.Infrastructure.Mapper
         {
             CreateMap<ProductDtoForInsertion, Product>(); //Mapleme işlemi otomatik olarak gerçekleşerek dto, Product nesnesine dönüştürülecek
             CreateMap<ProductDtoForUpdate, Product>().ReverseMap(); 
+            CreateMap<UserDtoForCreation, IdentityUser>(); 
         }
     }
 }

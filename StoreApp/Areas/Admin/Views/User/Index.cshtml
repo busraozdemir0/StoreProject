@@ -1,6 +1,6 @@
 @model IEnumerable<IdentityUser>
 
-    <div class="text-center">
+<div class="text-center my-5">
     <div class="display-6 my-4">Users</div>
 </div>
 
@@ -14,7 +14,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(IdentityUser user in Model)
+        @foreach (IdentityUser user in Model)
         {
             <tr>
                 <td>@user.Id</td>
