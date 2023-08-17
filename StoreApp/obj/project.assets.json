@@ -1591,11 +1591,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Store\\StoreApp\\StoreApp.csproj",
+      "projectUniqueName": "d:\\Store\\StoreApp\\StoreApp.csproj",
       "projectName": "StoreApp",
-      "projectPath": "D:\\Store\\StoreApp\\StoreApp.csproj",
+      "projectPath": "d:\\Store\\StoreApp\\StoreApp.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\Store\\StoreApp\\obj\\",
+      "outputPath": "d:\\Store\\StoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1612,14 +1612,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Store\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Store\\Entities\\Entities.csproj"
+            "d:\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "d:\\Store\\Entities\\Entities.csproj"
             },
-            "D:\\Store\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\Store\\Repositories\\Repositories.csproj"
+            "d:\\Store\\Repositories\\Repositories.csproj": {
+              "projectPath": "d:\\Store\\Repositories\\Repositories.csproj"
             },
-            "D:\\Store\\Services\\Services.csproj": {
-              "projectPath": "D:\\Store\\Services\\Services.csproj"
+            "d:\\Store\\Services\\Services.csproj": {
+              "projectPath": "d:\\Store\\Services\\Services.csproj"
             }
           }
         }

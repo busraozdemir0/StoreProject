@@ -70,6 +70,7 @@ namespace StoreApp.Infrastructure.Extensions
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IOrderService, OrderManager>();
+            services.AddScoped<IAuthService, AuthManager>();
         }
 
         // url yönlendirmesinde ilgili yazılar veya yönlendirmeler küçük harf olması için (../product/get/2 gibi)

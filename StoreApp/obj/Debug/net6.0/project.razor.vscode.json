@@ -24092,6 +24092,16 @@
       "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\_LoginMenu.cshtml",
       "TargetPath": "Views\\Shared\\_LoginMenu.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Account\\Register.cshtml",
+      "TargetPath": "Views\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\Role\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Role\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
