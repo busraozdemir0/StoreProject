@@ -12,6 +12,7 @@ namespace StoreApp.Infrastructure.Mapper
             CreateMap<ProductDtoForInsertion, Product>(); //Mapleme işlemi otomatik olarak gerçekleşerek dto, Product nesnesine dönüştürülecek
             CreateMap<ProductDtoForUpdate, Product>().ReverseMap(); 
             CreateMap<UserDtoForCreation, IdentityUser>(); 
+            CreateMap<UserDtoForUpdate, IdentityUser>().ReverseMap(); 
         }
     }
 }

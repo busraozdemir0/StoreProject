@@ -24112,6 +24112,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\User\\Create.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\User\\Create.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\User\\Update.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\User\\Update.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
