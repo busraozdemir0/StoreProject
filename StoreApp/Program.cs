@@ -30,6 +30,10 @@ app.UseSession();  // Oturumları kullanabilmek için
 app.UseHttpsRedirection();
 app.UseRouting();
 
+//endpointlerin altında yazarsak bazı kodlarımız çalışmayabiliyor(Bu yüzden routing ve endpointler arasında yazdık)
+app.UseAuthentication();  // oturum açma
+app.UseAuthorization();  // yetkilendirme
+
 app.ConfigureLocalization(); // Localization metodu
 
 app.UseEndpoints(endpoints=> {
@@ -45,6 +49,8 @@ app.UseEndpoints(endpoints=> {
 
     endpoints.MapRazorPages();
 });
+
+
 
 app.ConfigureAndCheckMigration(); // metot sayesinde migration'u update etmemize gerek kalmayacak çünkü bu metot otomatik migrate işlemini yapacak
 
