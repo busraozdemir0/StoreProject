@@ -1,4 +1,5 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
@@ -14,6 +15,7 @@ namespace StoreApp.Controllers
             _manager = manager;
             _cart = cart;
         }
+        [Authorize] // Kullanıcı sepete ürün ekledikten sonra sipariş vermeye kalkışırsa login olması gereksin
         public ViewResult Checkout()=> View(new Order());
 
         [HttpPost]
