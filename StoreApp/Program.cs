@@ -18,6 +18,7 @@ builder.Services.ConfigureServiceRegistration();
 
 builder.Services.ConfigureRouting(); // url yönlendirmesinde ilgili yazılar veya yönlendirmeler küçük harf olması için(../product/get/2 gibi)
 
+builder.Services.ConfigureApplicationCookie();
 
 builder.Services.AddAutoMapper(typeof(Program));  // AutoMapper => Dto tanımlarını otomatik olarak nesnelere dönüştüren servis kaydı
 
