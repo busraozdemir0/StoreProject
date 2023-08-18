@@ -19058,7 +19058,7 @@
         }
       },
       {
-        "HashCode": 966937011,
+        "HashCode": 1343613989,
         "Kind": "MVC.ViewComponent",
         "Name": "__Generated__ShowcaseViewComponentTagHelper",
         "AssemblyName": "StoreApp",
@@ -19068,6 +19068,18 @@
           {
             "TagName": "vc:showcase",
             "CaseSensitive": false
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "MVC.ViewComponent",
+            "Name": "page",
+            "TypeName": "System.String",
+            "DisplayName": "string ShowcaseViewComponentTagHelper.page",
+            "CaseSensitive": false,
+            "Metadata": {
+              "Common.PropertyName": "page"
+            }
           }
         ],
         "Metadata": {
@@ -24227,6 +24239,11 @@
     {
       "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\Dashboard\\_Cards.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Dashboard\\_Cards.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\Components\\Showcase\\List.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\Showcase\\List.cshtml",
       "FileKind": "mvc"
     }
   ]

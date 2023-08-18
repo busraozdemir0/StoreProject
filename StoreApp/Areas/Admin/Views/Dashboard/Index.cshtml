@@ -1,3 +1,6 @@
 <div class="my-5">
     <partial name="_Cards"></partial>
 </div>
+
+@* Showcase viewcomponentinin görünümünde list adında bir görünüm daha ekledik ve bu list adındaki sayfa sadece Admin dashboard için geçerli olacak *@
+@await Component.InvokeAsync("Showcase",new{page="list"}) 
