@@ -3,6 +3,9 @@ using StoreApp.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly); // api desteğini kullaanmak için
+
 builder.Services.AddControllersWithViews(); // Controller ve View'ların birlikte kullanılacağını ifade ettik
 
 builder.Services.AddRazorPages(); // RazorPage sayfaları controller olmadan da sayfaları yapmamıza yardımcı olur
@@ -49,6 +52,8 @@ app.UseEndpoints(endpoints=> {
     );
 
     endpoints.MapRazorPages();
+    
+    endpoints.MapControllers();  // api yapısını kullanmak için
 });
 
 
