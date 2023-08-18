@@ -24260,6 +24260,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\Category\\Update.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Category\\Update.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\Shared\\_Footer.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Footer.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
