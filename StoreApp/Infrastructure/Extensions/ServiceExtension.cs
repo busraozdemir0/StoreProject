@@ -21,10 +21,17 @@ namespace StoreApp.Infrastructure.Extensions
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlite(
-                    configuration.GetConnectionString("sqlconnection"),
+                //SQLLite kullanımında
+                // options.UseSqlite(
+                //     configuration.GetConnectionString("sqlconnection"),
+                //     b => b.MigrationsAssembly("StoreApp")
+                // ); //Migrations ifadeleri StoreApp klasörü içerisinde oluşacak
+                
+                //MSSQL Server kullanımında
+                options.UseSqlServer(
+                    configuration.GetConnectionString("mssqlconnection"),
                     b => b.MigrationsAssembly("StoreApp")
-                ); //Migrations ifadeleri StoreApp klasörü içerisinde oluşacak
+                );
                 options.EnableSensitiveDataLogging(true);
             });
         }
