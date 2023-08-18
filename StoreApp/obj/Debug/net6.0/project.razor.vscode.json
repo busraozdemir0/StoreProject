@@ -19153,6 +19153,63 @@
         }
       },
       {
+        "HashCode": -236459816,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__CategorySummaryViewComponentTagHelper",
+        "AssemblyName": "StoreApp",
+        "DisplayName": "CategorySummaryViewComponentTagHelper",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:category-summary",
+            "CaseSensitive": false
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "__Generated__CategorySummaryViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "CategorySummary",
+          "Runtime.Name": "ITagHelper"
+        }
+      },
+      {
+        "HashCode": -1849167325,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__OrderInProgressViewComponentTagHelper",
+        "AssemblyName": "StoreApp",
+        "DisplayName": "OrderInProgressViewComponentTagHelper",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:order-in-progress",
+            "CaseSensitive": false
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "__Generated__OrderInProgressViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "OrderInProgress",
+          "Runtime.Name": "ITagHelper"
+        }
+      },
+      {
+        "HashCode": 1139654154,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__UserSummaryViewComponentTagHelper",
+        "AssemblyName": "StoreApp",
+        "DisplayName": "UserSummaryViewComponentTagHelper",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:user-summary",
+            "CaseSensitive": false
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "__Generated__UserSummaryViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "UserSummary",
+          "Runtime.Name": "ITagHelper"
+        }
+      },
+      {
         "HashCode": 1323995847,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -24165,6 +24222,11 @@
     {
       "FilePath": "d:\\Store\\StoreApp\\Pages\\Demo.cshtml",
       "TargetPath": "Pages\\Demo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Areas\\Admin\\Views\\Dashboard\\_Cards.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Dashboard\\_Cards.cshtml",
       "FileKind": "mvc"
     }
   ]
