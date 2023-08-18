@@ -22,17 +22,19 @@
             <tr>
                 <td>@user.Id</td>
                 <td>@user.UserName</td>
-                <td user-name="@user.UserName" user-role="" ></td>
+                <td user-name="@user.UserName" user-role=""></td>
                 <td>
                     <div class="btn-group">
-                        <a class="btn btn-warning rounded-0" asp-action="Update" asp-route-id="@user.UserName">
-                            <i class="fa fa-edit"></i> Edit</a>
-                        <a class="btn btn-info rounded-0" asp-action="ResetPassword" asp-route-id="@user.UserName">
-                            <i class="fa fa-edit"></i> Reset Password</a>
+                        <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning rounded-0"
+                            asp-action="Update" asp-route-id="@user.UserName">
+                            <i class="fa fa-edit"></i></a>
+                        <a data-toggle="tooltip" data-placement="top" title="Reset Password" class="btn btn-info rounded-0"
+                            asp-action="ResetPassword" asp-route-id="@user.UserName">
+                            <i class="fa fa-edit"></i> </a>
                         <form method="post" asp-action="DeleteOneUser">
                             <input type="hidden" name="UserName" value="@user.UserName" />
-                            <button type="submit" class="btn btn-danger rounded-0" >
-                                <i class="fa fa-solid fa-trash"></i> Delete
+                            <button data-toggle="tooltip" data-placement="top" title="Delete"  type="submit" class="btn btn-danger rounded-0">
+                                <i class="fa fa-solid fa-trash"></i>
                             </button>
 
                         </form>
@@ -42,3 +44,11 @@
         }
     </tbody>
 </table>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+}

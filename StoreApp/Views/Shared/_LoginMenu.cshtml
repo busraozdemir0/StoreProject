@@ -2,7 +2,8 @@
 paneline gidecek olan link gözüksün *@
 {
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a>
+        <a class="nav-link" aria-current="page" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+            <i class="fa-solid fa-gear"></i> Admin</a>
     </li>
 }
 
@@ -10,7 +11,8 @@ paneline gidecek olan link gözüksün *@
 {
     <li class="nav-item">
         <a class="nav-link" aria-current="page" asp-area="" asp-controller="Account" asp-action="Logout"
-            asp-route-returnUrl="@Context.Request.PathAndQuery()">Logout</a> @* asp-route-returnUrl ifadesi ile kullanıcı
+            asp-route-returnUrl="@Context.Request.PathAndQuery()">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout</a> @* asp-route-returnUrl ifadesi ile kullanıcı
     hangi sayfadan çıkış yapma işlemine tıkladıysa o sayfaya geri yönlendirilecek *@
     </li>
 }
@@ -18,7 +20,8 @@ else
 {
     <li class="nav-item">
         <a class="nav-link" aria-current="page" asp-area="" asp-controller="Account" asp-action="Login"
-            asp-route-returnUrl="@Context.Request.PathAndQuery()">Login</a>  @* asp-route-returnUrl ifadesi ile kullanıcı
+            asp-route-returnUrl="@Context.Request.PathAndQuery()">
+            <i class="fa-solid fa-right-to-bracket"></i> Login</a>  @* asp-route-returnUrl ifadesi ile kullanıcı
     hangi sayfa üzerinden giriş yaptıysa tekrar o sayfaya geri döndürülecek *@
     </li>
 }
