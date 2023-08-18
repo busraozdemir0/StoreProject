@@ -24245,6 +24245,11 @@
       "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\Components\\Showcase\\List.cshtml",
       "TargetPath": "Views\\Shared\\Components\\Showcase\\List.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Store\\StoreApp\\Views\\Shared\\_Nofitication.cshtml",
+      "TargetPath": "Views\\Shared\\_Nofitication.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

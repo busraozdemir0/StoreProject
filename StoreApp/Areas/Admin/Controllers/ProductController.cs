@@ -62,7 +62,8 @@ namespace StoreApp.Areas.Admin.Controllers
                 }
                 productDto.ImageUrl=String.Concat("/images/",file.FileName);
                 _manager.ProductService.CreateProduct(productDto);
-                return RedirectToAction("Index");
+                TempData["success"] = $"{productDto.ProductName} has been created."; // Kullanıcıya ürün eklendiğine dair bildirim(feedback)
+                return RedirectToAction("Index", "Product");
             }
             return View();
         }
@@ -96,6 +97,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public IActionResult Delete([FromRoute(Name = "id")] int id)
         {
             _manager.ProductService.DeleteOneProduct(id);
+            TempData["danger"]="The product has been removed.";
             return RedirectToAction("Index");
         }
     }
