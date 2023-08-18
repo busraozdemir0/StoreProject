@@ -65,14 +65,14 @@
         }
       }
     },
-    "d:\\Store\\Presentation\\Presentation.csproj": {
+    "D:\\Store\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Store\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "D:\\Store\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "d:\\Store\\Presentation\\Presentation.csproj",
+        "projectPath": "D:\\Store\\Presentation\\Presentation.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "d:\\Store\\Presentation\\obj\\",
+        "outputPath": "D:\\Store\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Store\\Services\\Services.csproj": {
-                "projectPath": "d:\\Store\\Services\\Services.csproj"
+              "D:\\Store\\Services\\Services.csproj": {
+                "projectPath": "D:\\Store\\Services\\Services.csproj"
               }
             }
           }
@@ -130,14 +130,14 @@
         }
       }
     },
-    "D:\\Store\\Repositories\\Repositories.csproj": {
+    "d:\\Store\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Store\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "d:\\Store\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\Store\\Repositories\\Repositories.csproj",
+        "projectPath": "d:\\Store\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Store\\Repositories\\obj\\",
+        "outputPath": "d:\\Store\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -203,14 +203,14 @@
         }
       }
     },
-    "d:\\Store\\Services\\Services.csproj": {
+    "D:\\Store\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Store\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\Store\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "d:\\Store\\Services\\Services.csproj",
+        "projectPath": "D:\\Store\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "d:\\Store\\Services\\obj\\",
+        "outputPath": "D:\\Store\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -230,8 +230,8 @@
               "D:\\Store\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\Store\\Entities\\Entities.csproj"
               },
-              "D:\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\Store\\Repositories\\Repositories.csproj"
+              "d:\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "d:\\Store\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -298,14 +298,14 @@
               "D:\\Store\\Entities\\Entities.csproj": {
                 "projectPath": "D:\\Store\\Entities\\Entities.csproj"
               },
-              "d:\\Store\\Presentation\\Presentation.csproj": {
-                "projectPath": "d:\\Store\\Presentation\\Presentation.csproj"
+              "D:\\Store\\Presentation\\Presentation.csproj": {
+                "projectPath": "D:\\Store\\Presentation\\Presentation.csproj"
               },
-              "D:\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\Store\\Repositories\\Repositories.csproj"
+              "d:\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "d:\\Store\\Repositories\\Repositories.csproj"
               },
-              "d:\\Store\\Services\\Services.csproj": {
-                "projectPath": "d:\\Store\\Services\\Services.csproj"
+              "D:\\Store\\Services\\Services.csproj": {
+                "projectPath": "D:\\Store\\Services\\Services.csproj"
               }
             }
           }

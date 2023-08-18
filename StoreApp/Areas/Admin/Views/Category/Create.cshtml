@@ -1,0 +1,25 @@
+@model CategoryDtoForInsertion
+
+<div class="text-center">
+    <div class="display-6 my-4">Create Category</div>
+</div>
+
+<form method="post" asp-action="Create">
+    <div class="text-danger" asp-validation-summary="All"></div> @*validasyon mesajları burada kırmızıyla yazılır *@
+   
+     <div class="form-group my-3">
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName" class="form-control" />
+    </div>
+    
+    <div class="form-group my-3">
+        <div class="btn-group">
+            <button class="btn btn-primary" type="submit">
+                <i class="fa fa-save"></i> Save
+            </button>
+            <a class="btn btn-outline-primary" asp-action="Index" asp-controller="Category">
+                <i class="fa fa-list"></i> Categories
+            </a>
+        </div>
+    </div>
+</form>

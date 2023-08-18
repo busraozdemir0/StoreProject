@@ -3402,8 +3402,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\Store\\Services\\Services.csproj": {
-              "projectPath": "d:\\Store\\Services\\Services.csproj"
+            "D:\\Store\\Services\\Services.csproj": {
+              "projectPath": "D:\\Store\\Services\\Services.csproj"
             }
           }
         }
