@@ -22,6 +22,8 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Index([FromQuery] ProductRequestParameters p)
         {
+            ViewData["Title"]="Products"; // ViewData ile Products bilgisi view'a gönderiliyor
+
             var products =_manager.ProductService.GetAllProductsWithDetails(p); // DI yaptığımız için direkt _manager yazarak erişebildik
             var pagination=new Pagination()
             {
@@ -70,8 +72,10 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Update([FromRoute(Name = "id")] int id)
         {
+
             ViewBag.Categories=GetCategoriesSelectList();
             var model = _manager.ProductService.GetOneProductForUpdate(id, false);
+            ViewData["Title"]=model?.ProductName; // Başlık bilgisine hangi ürün üzerinde güncelleme yapıyorsak o ürünün adını gönderecek
             return View(model);
         }
 

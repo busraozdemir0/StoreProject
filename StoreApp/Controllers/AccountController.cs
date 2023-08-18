@@ -21,6 +21,7 @@ namespace StoreApp.Controllers
 
         public IActionResult Login([FromQuery(Name = "ReturnUrl")] string ReturnUrl = "/")
         {
+            ViewData["Title"]="Login";
             return View(new LoginModel() { ReturnUrl = ReturnUrl });
         }
 
@@ -63,6 +64,7 @@ namespace StoreApp.Controllers
 
         public IActionResult Register()
         {
+            ViewData["Title"]="Register";
             return View();
         }
 

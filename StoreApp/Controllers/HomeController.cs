@@ -5,6 +5,7 @@ namespace StoreApp.AddControllersWithViews{
     {
         public IActionResult Index()
         {
+            ViewData["Title"]="Welcome";
             return View();
         }
     }

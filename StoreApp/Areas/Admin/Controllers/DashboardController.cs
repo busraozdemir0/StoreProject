@@ -9,6 +9,7 @@ namespace StoreApp.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Title"]="Dashboard";
             TempData["info"]=$"Welcome back, {DateTime.Now.ToShortTimeString()}"; // Kullanıcının admin sayfasına başarıyla giriş yaptığını ve o anki saati gösteren bildirim.
             return View();
         }

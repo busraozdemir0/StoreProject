@@ -9,6 +9,7 @@ namespace StoreApp.Areas.Admin.Controllers
     {
          public IActionResult Index()
         {
+            ViewData["Title"]="Category";
             return View();
         }
     }
