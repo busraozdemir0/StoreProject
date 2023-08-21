@@ -47,6 +47,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewBag.Categories=GetCategoriesSelectList();
+            ViewData["Title"]= "Product";
             return View();
         }
 
@@ -93,7 +94,7 @@ namespace StoreApp.Areas.Admin.Controllers
                 }
                 productDto.ImageUrl=String.Concat("/images/",file.FileName);
                 _manager.ProductService.UpdateOneProduct(productDto);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Product");
             }
             return View();
         }

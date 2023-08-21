@@ -22,10 +22,10 @@ namespace Repositories
         {
             return _context
                 .Products
-                .FilteredByCategoryId(p.CategoryId)
-                .FilteredBySearchTerm(p.SearchTerm)
-                .FilteredByPrice(p.MinPrice,p.MaxPrice,p.IsValidPrice)
-                .ToPaginate(p.PageNumber,p.PageSize);
+                .FilteredByCategoryId(p.CategoryId)     // parametreden gelen CategoryId'ye göre filtreleyecek
+                .FilteredBySearchTerm(p.SearchTerm)     // parametreden gelen kelimeye göre arama işlemi
+                .FilteredByPrice(p.MinPrice,p.MaxPrice,p.IsValidPrice)  // min ve max fiyatlar girilip filtreleme
+                .ToPaginate(p.PageNumber,p.PageSize);  // sayfalama işlemi
         }
 
         // ? veritabanında null değer de olabileceği anlamına geliyor.

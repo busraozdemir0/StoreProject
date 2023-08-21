@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\images\\9.jpg"
     },
     {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\Lkoltuk.png",
+      "PackagePath": "staticwebassets\\images\\Lkoltuk.png"
+    },
+    {
       "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\airpod.jpg",
       "PackagePath": "staticwebassets\\images\\airpod.jpg"
     },
@@ -121,16 +125,36 @@
       "PackagePath": "staticwebassets\\images\\hp-computer.jpg"
     },
     {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\ip11pro.png",
+      "PackagePath": "staticwebassets\\images\\ip11pro.png"
+    },
+    {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\klavye.png",
+      "PackagePath": "staticwebassets\\images\\klavye.png"
+    },
+    {
       "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\laptop-lenovo.jpg",
       "PackagePath": "staticwebassets\\images\\laptop-lenovo.jpg"
+    },
+    {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\lavaboDolabı.png",
+      "PackagePath": "staticwebassets\\images\\lavaboDolabı.png"
     },
     {
       "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\mouse.jpg",
       "PackagePath": "staticwebassets\\images\\mouse.jpg"
     },
     {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\mouse.png",
+      "PackagePath": "staticwebassets\\images\\mouse.png"
+    },
+    {
       "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\pc.jpg",
       "PackagePath": "staticwebassets\\images\\pc.jpg"
+    },
+    {
+      "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\pc.png",
+      "PackagePath": "staticwebassets\\images\\pc.png"
     },
     {
       "Id": "D:\\Store\\StoreApp\\wwwroot\\images\\sons-and-lovers.jpg",

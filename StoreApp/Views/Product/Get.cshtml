@@ -9,6 +9,7 @@
 
             <img class="img-fluid shadow rounded-3 p-5 my-3" src=@Model?.ImageUrl alt="@Model.ProductName" />
             <p class="lead text-danger">@Model.Price.ToString("c")</p>
+            <p class="card-text mb-4">@Model?.Summary</p>
         </div>
     </div>
 </div>
@@ -29,7 +30,7 @@
     </div>
 </div>
 
-@section Header{
+@* @section Header{
     <div>Header for only Get</div>
 
-}
+} *@

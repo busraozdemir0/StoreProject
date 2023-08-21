@@ -21,6 +21,7 @@ namespace StoreApp.Controllers
         //
         public IActionResult Index(ProductRequestParameters p)
         {
+            ViewData["Title"]="Product";
             var products =_manager.ProductService.GetAllProductsWithDetails(p); // DI yaptığımız için direkt _manager yazarak erişebildik
             var pagination=new Pagination()
             {

@@ -10,6 +10,7 @@
         <div>
             <div class=" text-danger" asp-validation-summary="All"></div>
         </div>
+        <div class="mb-5">
         <form method="post" asp-action="Login">
             <input type="hidden" asp-for="ReturnUrl" />
             
@@ -33,6 +34,7 @@
                 If you don't have an account. Please click here to achieve <a asp-action="Register" > registration page.</a>
             </div>
         </form>
+        </div>
     </div>
     <div class="col-md-3"></div>
 </div>

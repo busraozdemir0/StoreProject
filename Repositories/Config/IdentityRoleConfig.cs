@@ -8,7 +8,7 @@ namespace Repositories.Config
     {
         public void Configure(EntityTypeBuilder<IdentityRole> builder)
         {
-            builder.HasData(
+            builder.HasData( // veritabanı sıfırlansa bile en başta bu veriler otomatik kaydedilmiş olacaktır
                 new IdentityRole(){ Name="User", NormalizedName="USER" },
                 new IdentityRole(){ Name="Editor", NormalizedName="EDITOR" },
                 new IdentityRole(){ Name="Admin", NormalizedName="ADMIN" }

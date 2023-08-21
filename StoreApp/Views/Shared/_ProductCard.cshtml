@@ -12,7 +12,6 @@
                     @Model?.Price.ToString("c2")
                 </div>
             </div>
-            <p class="card-text">@Model?.Summary</p>
             <div class="d-flex justify-content-center">
              <div class="btn btn-group"> @* btn group ile iki butonun yan yana gelmesini sağladık *@
                 <a asp-controller="Product" asp-action="Get" asp-route-id=@Model.ProductId class="btn btn-outline-secondary rounded-2">
