@@ -2615,11 +2615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Store\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "d:\\Store\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "D:\\Store\\Repositories\\Repositories.csproj",
+      "projectPath": "d:\\Store\\Repositories\\Repositories.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\Store\\Repositories\\obj\\",
+      "outputPath": "d:\\Store\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

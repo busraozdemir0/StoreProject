@@ -1,13 +1,58 @@
 @model IEnumerable<IdentityRole>
 
-<div class="text-center">
+<div class="text-center my-5">
     <div class="display-6 my-4">Roles</div>
 </div>
-<div class="container" style="margin-bottom:300px;">
-    <ul class="list-group">
-        @foreach (var role in Model)
-        {
-            <li class="list-group-item">@role.Name</li>
-        }
-    </ul>
+<div class="d-flex justify-content-end my-3">
+    <a class="btn btn-outline-success" asp-action="Create">
+        <i class="fa fa-plus"></i> Add Role</a>
 </div>
+<div class="row mb-5">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <table>
+            <thead>
+                <tr>
+                    <th hidden>Id</th>
+                    <th>Role Name</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (IdentityRole role in Model)
+                {
+                    <tr>
+                        <td hidden>@role.Id</td>
+                        <td>@role.Name</td>
+                        <td>
+                            <div class="btn-group">
+                                <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning rounded-0"
+                                    asp-action="Update" asp-route-id="@role.Id">
+                                    <i class="fa fa-edit"></i></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Delete"
+                                    class="btn btn-danger rounded-0" asp-action="Delete" asp-route-id="@role.Id">
+                                    <i class="fa fa-solid fa-trash"></i></a>
+                                @* <form method="post" asp-action="DeleteOneRole">
+                            <input type="hidden" name="UserName" value="@role.Id" />
+                            <button data-toggle="tooltip" data-placement="top" title="Delete" type="submit"
+                            class="btn btn-danger rounded-0">
+                            <i class="fa fa-solid fa-trash"></i>
+                            </button>
+
+                            </form> *@
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+}
