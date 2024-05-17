@@ -1,8 +1,9 @@
 # Store Project - E-Ticaret Sitesi
 ## Projenin Genel Amacı
 ###
-Bu proje BTK Akademi'de yer alan "ASP.NET Core MVC" adlı eğitimin projesidir.
-Store Project; Admin paneli üzerinden eklenen ürünleri ana sayfada görüntüleyerek ve ürünü sepete ekleyerek sipariş verebilme üzerine kurgulanmış ve ingilizce olarak geliştirilmiş bir e-ticaret mantığında web uygulamasıdır. 
+Bu proje BTK Akademi'de yer alan "ASP.NET Core MVC" adlı eğitim ile birlikte geliştirilmiş bir projedir.
+
+Store Project; Admin paneli üzerinden eklenen ürünleri ana sayfada görüntüleyerek ve ürünü sepete ekleyerek sipariş verebilme üzerine kurgulanmış ve ingilizce olarak geliştirilmiş e-ticaret mantığındaki web uygulamasıdır. 
 
 .Net Core 6.0 kullanılarak geliştirilen bu uygulamada, Entity Framework Code First yaklaşımı benimsenmiştir. Projede N katmanlı mimari yapısı gözetilerek CRUD işlemlerinin daha pratik yapılması sağlanmıştır.
 ###
